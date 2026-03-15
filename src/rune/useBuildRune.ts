@@ -1,4 +1,4 @@
-import { buildRune, splitToDigits } from "./rune.functions";
+import { buildRune, normalizeToPositionalDigits } from "./rune.functions";
 import type { RuneModelType } from "./rune.types";
 import { useMemo } from "react";
 import { isValueValid } from "../utils/utils";
@@ -8,7 +8,7 @@ const useBuildRune = (inputValue: string): RuneModelType => {
   return useMemo(() => {
     return !inputValue || !isValueValid(inputValue)
       ? []
-      : buildRune(splitToDigits(inputValue));
+      : buildRune(normalizeToPositionalDigits(inputValue));
   }, [inputValue]);
 };
 
