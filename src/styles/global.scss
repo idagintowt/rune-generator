@@ -2,8 +2,10 @@
   --text: #9ca3af;
   --text-h: #f3f4f6;
   --bg: #16171d;
-  --btn: #3a8b87;
-  --btn-hover: #4e9793;
+  --btn-primary: #29625e;
+  --btn-primary-hover: #357e79;
+  --btn-outline-out: #858585;
+  --btn-outline-out-hover: #ffffff;
 
   --sans: system-ui, "Segoe UI", Roboto, sans-serif;
   --heading: system-ui, "Segoe UI", Roboto, sans-serif;
@@ -42,6 +44,29 @@ body {
     text-align: center;
     box-sizing: border-box;
 
+    button {
+      color: var(--text-h);
+      padding: 10px 15px;
+      height: 40px;
+      font-size: 18px;
+      cursor: pointer;
+      border: none;
+      text-transform: uppercase;
+      border-radius: 2px;
+      opacity: 1;
+      transition: background-color 0.3s ease;
+
+      &:disabled {
+        pointer-events: none;
+        opacity: 0.5;
+      }
+    }
+
+    input {
+      font-size: 18px;
+      padding: 6px 10px;
+    }
+
     h1 {
       font-family: var(--heading);
       font-weight: 500;
@@ -52,37 +77,6 @@ body {
       text-transform: uppercase;
       line-height: 1;
     }
-
-    p {
-      margin: 0;
-    }
-  }
-}
-
-input {
-  font-size: 18px;
-  padding: 6px 10px;
-}
-
-button {
-  padding: 6px 10px;
-  height: 40px;
-  font-size: 18px;
-  cursor: pointer;
-  background-color: var(--btn);
-  border: none;
-  text-transform: uppercase;
-  opacity: 1;
-  transition: all 0.3s ease;
-
-  &:hover {
-    background-color: var(--btn-hover);
-    border-radius: 4px;
-  }
-
-  &:disabled {
-    pointer-events: none;
-    opacity: 0.6;
   }
 }
 

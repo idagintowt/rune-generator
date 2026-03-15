@@ -1,0 +1,16 @@
+.btn {
+  &.primary {
+    background-color: var(--btn-primary);
+    &:hover {
+      background-color: var(--btn-primary-hover);
+    }
+  }
+
+  &.outline {
+    background-color: transparent;
+    outline: 1px solid var(--btn-outline-out);
+    &:hover {
+      outline: 2px solid var(--btn-outline-out-hover);
+    }
+  }
+}

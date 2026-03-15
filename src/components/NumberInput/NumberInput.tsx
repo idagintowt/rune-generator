@@ -1,4 +1,5 @@
 import { isValueValid } from "../../utils/utils";
+import Button from "../Button/Button";
 import "./numberInput.scss";
 
 type NumberInputProps = {
@@ -17,7 +18,7 @@ const NumberInput = ({ value, setValue }: NumberInputProps) => {
   const handleClear = () => setValue("");
 
   return (
-    <div className="input-section">
+    <div className="input-container">
       <label htmlFor="number-input">Enter integer (1–9999)</label>
       <div className="input-wrapper">
         <input
@@ -28,14 +29,13 @@ const NumberInput = ({ value, setValue }: NumberInputProps) => {
           value={value}
           onChange={handleChange}
         />
-        <button
-          type="button"
+        <Button
           disabled={!value}
           onClick={handleClear}
+          text="x"
+          variant="outline"
           title="Clear input"
-        >
-          x
-        </button>
+        />
       </div>
     </div>
   );

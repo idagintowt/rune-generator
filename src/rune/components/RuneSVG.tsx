@@ -1,16 +1,17 @@
 import { GEOMETRY } from "../rune.constants";
 import type { RunePartType } from "../rune.types";
+import { forwardRef } from "react";
 import "./runeSVG.scss";
 
 const { strokeWidth, viewHalf, axisTop, axisBottom } = GEOMETRY;
 
-type RunePropsType = {
+type PropsType = {
   rune: RunePartType[];
 };
 
 const MainAxis = () => <line x1="0" y1={axisTop} x2="0" y2={axisBottom} />;
 
-const Rune = ({ rune }: RunePropsType) => {
+const Rune = ({ rune }: PropsType) => {
   return rune.map(({ lines, transform }, i) => (
     <g key={i} transform={transform}>
       {lines.map(([x1, y1, x2, y2], j) => (
@@ -20,28 +21,32 @@ const Rune = ({ rune }: RunePropsType) => {
   ));
 };
 
-const RuneSVG = ({ rune }: RunePropsType) => {
-  const hasRune = rune.length > 0;
+export const RuneSVG = forwardRef(
+  ({ rune }: PropsType, ref: React.ForwardedRef<SVGSVGElement>) => {
+    const hasRune = rune.length > 0;
 
-  return (
-    <div className="rune-section">
-      <svg
-        width="80%"
-        height="100%"
-        viewBox={`${-viewHalf} ${-viewHalf} ${viewHalf * 2} ${viewHalf * 2}`}
-        stroke={hasRune ? "#181818" : "#C8C8C8"}
-        strokeWidth={strokeWidth}
-        strokeLinejoin="round"
-        strokeLinecap="round"
-        fill="none"
-      >
-        <g>
-          <MainAxis />
-          {hasRune && <Rune rune={rune} />}
-        </g>
-      </svg>
-    </div>
-  );
-};
+    return (
+      <div className="rune-container">
+        <svg
+          ref={ref}
+          xmlns="http://www.w3.org/2000/svg"
+          height="100%"
+          width="100%"
+          viewBox={`${-viewHalf} ${-viewHalf} ${viewHalf * 2} ${viewHalf * 2}`}
+          stroke={hasRune ? "#181818" : "#C8C8C8"}
+          strokeWidth={strokeWidth}
+          strokeLinejoin="round"
+          strokeLinecap="round"
+          fill="none"
+        >
+          <g>
+            <MainAxis />
+            {hasRune && <Rune rune={rune} />}
+          </g>
+        </svg>
+      </div>
+    );
+  },
+);
 
 export default RuneSVG;

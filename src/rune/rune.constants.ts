@@ -32,7 +32,7 @@ export const GEOMETRY = {
   axisTop: -2 * UNIT,
   axisBottom: 2 * UNIT,
   viewHalf: 3 * UNIT,
-};
+} as const;
 
 // // transformations used for positioning runes in correct quadrants
 export const TRANSFORMS = [
@@ -40,4 +40,4 @@ export const TRANSFORMS = [
   "scale(1,-1)", // hundreds
   "scale(-1,1)", // tens
   "", // units
-];
+] as const;
