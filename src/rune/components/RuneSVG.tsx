@@ -1,12 +1,12 @@
-import { GEOMETRY } from "../rune.constants";
-import type { RunePartType } from "../rune.types";
+import { GEOMETRY } from "../rune.geometry";
+import type { RuneModelType } from "../rune.types";
 import { forwardRef } from "react";
 import "./runeSVG.scss";
 
 const { strokeWidth, viewHalf, axisTop, axisBottom } = GEOMETRY;
 
 type PropsType = {
-  rune: RunePartType[];
+  rune: RuneModelType;
 };
 
 const MainAxis = () => <line x1="0" y1={axisTop} x2="0" y2={axisBottom} />;

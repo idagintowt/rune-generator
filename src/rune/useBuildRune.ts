@@ -1,9 +1,9 @@
 import { buildRune, splitToDigits } from "./rune.functions";
-import type { RunePartType } from "./rune.types";
+import type { RuneModelType } from "./rune.types";
 import { useMemo } from "react";
 import { isValueValid } from "../utils/utils";
 
-const useRune = (inputValue: string): RunePartType[] => {
+const useBuildRune = (inputValue: string): RuneModelType => {
   //TODO: add explanation for unnecessary c hook and memo
   return useMemo(() => {
     return !inputValue || !isValueValid(inputValue)
@@ -12,4 +12,4 @@ const useRune = (inputValue: string): RunePartType[] => {
   }, [inputValue]);
 };
 
-export default useRune;
+export default useBuildRune;

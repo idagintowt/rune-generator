@@ -2,14 +2,14 @@ import { useState, useRef } from "react";
 import RuneSVG from "./rune/components/RuneSVG";
 import NumberInput from "./components/NumberInput/NumberInput";
 import Button from "./components/Button/Button";
-import useRune from "./rune/useRune";
+import useBuildRune from "./rune/useBuildRune";
 import { downloadSVG } from "./utils/utils";
 import "./App.scss";
 
 function App() {
   const svgRef = useRef<SVGSVGElement | null>(null);
   const [value, setValue] = useState<string>("");
-  const rune = useRune(value);
+  const rune = useBuildRune(value);
 
   const handleDownloadRune = () => {
     if (!rune.length || !svgRef.current) return;

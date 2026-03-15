@@ -18,7 +18,9 @@ export type DigitsType = [
   units: DigitType,
 ];
 
-export type RunePartType = {
+type RunePartType = {
   lines: readonly LinePointsType[];
   transform: string;
 };
+
+export type RuneModelType = RunePartType[];
