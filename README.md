@@ -144,7 +144,7 @@ Using a centered coordinate system makes the geometry simpler for me. It also ma
 ### 4. Main axis
 
 The rune system is built around a main vertical axis that goes through the center of the SVG (0,0).
-The axis spans from -2 _ UNIT to 2 _ UNIT.
+The axis spans from -2UNIT to 2UNIT.
 
 In the code this axis is used as a line for transformations.
 Base rune parts are mirrored and placed in 4 different quadrants relative to this axis.
