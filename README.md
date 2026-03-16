@@ -95,7 +95,7 @@ This makes the system easier to work with:
 
 - all proportions stay consistent
 
-- the geometry is easier to reason and visualise
+- the geometry is easier to reason and visualize
 
 UNIT acts as the base measurement for the entire rune system.
 
@@ -105,7 +105,7 @@ UNIT acts as the base measurement for the entire rune system.
 
 The SVG coordinate system is centered at: `(0,0)`
 
-In the code this viewBox parameters ensure that:
+In the code the following viewBox parameters ensure that:
 
 ```tsx
 viewBox={`${-viewHalf} ${-viewHalf} ${viewHalf * 2} ${viewHalf * 2}`}
