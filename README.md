@@ -1,4 +1,4 @@
-# Rune Generator (Recruitment Task)
+# Rune Generator
 
 A simple React + TypeScript (built with Vite) application that converts integers (1–9999) into graphical runes rendered as SVG, which can then be downloaded as files.
 
