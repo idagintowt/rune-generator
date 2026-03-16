@@ -61,7 +61,7 @@ primitive lines (1,2,3,4,6) -> base rune shapes (1-9 runes) -> quadrant transfor
 
 ## Implementation notes
 
-### 1. The number 0 is not allowed as input
+### 1. The number 0 is not allowed as standalone input
 
 The generator accepts numbers from **1 to 9999**.
 
