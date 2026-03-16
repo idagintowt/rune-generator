@@ -1,6 +1,6 @@
 # Rune Generator
 
-A simple React + TypeScript (built with Vite) application that converts integers (1–9999) into graphical runes rendered as SVG, which can then be downloaded as files.
+A simple React + TypeScript (built with Vite) application that converts natural numbers (1–9999) into graphical runes rendered as SVG, which can then be downloaded as files.
 
 ## Running the project
 
@@ -63,7 +63,7 @@ primitive lines (1,2,3,4,6) -> base rune shapes (1-9 runes) -> quadrant transfor
 
 ### 1. The number 0 is not allowed as standalone input
 
-The generator accepts numbers from **1 to 9999**.
+The generator accepts natural numbers from **1 to 9999**.
 
 Numbers can still contain 0 (for example 4067), but the **number 0 itself is not allowed**.
 
