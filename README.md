@@ -173,7 +173,9 @@ Some parts of the system have clear limits. For example:
 
 Using types makes the geometry easier to understand when reading the code (I hope so).
 
-### UI
+---
+
+### 6. UI
 
 The UI is intentionally minimal.
 
